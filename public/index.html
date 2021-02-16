@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Donation Page</title>
+    <style>
+        body{
+            background-image:url(images/background.jpg);
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-light font-weight-bold bg-dark p-2" href="/">Donation For Cause</a>
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon
+            "></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active mx-3">
+                    <a class="nav-link font-weight-bold text-light bg-dark p-2" href="/">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link text-light bg-dark p-2 font-weight-bold" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container my-3" id="container-1">
+        <div class="jumbotron">
+            <div class="text-center">
+                <h1 class="display-4">Donate Now!</h1>
+                <p class="lead">We make a living by what we get. We make a life by what we give.</p>
+                <i>
+                    <p>―Winston S. Churchill</p>
+                </i>
+                <button class="btn btn-primary btn-lg" id="btn">Donate Now</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3" id="container-2" style="display: none">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">Donate Now!</h1>
+            <p class="lead text-center">We make a living by what we get. We make a life by what we give.</p>
+            <i><p class="text-center">―Winston S. Churchill</p></i>
+            <hr class="my-4">
+            <p class="lead">
+                <form action="/paynow" method="POST" class="text-center">
+                    <div class="form-group">
+                        <label for="exampleInputName1" class="h5">Enter Number</label>
+                        <input type="text" class="form-control col-md-5 mx-auto" id="exampleInputName1" 
+                            placeholder="Enter number" name="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="h5">Email address</label>
+                        <input type="email" class="form-control col-md-5 mx-auto" id="exampleInputEmail1" 
+                            placeholder="Enter email" name="email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="h5">Enter Amount</label>
+                        <input type="text" class="form-control col-md-5 mx-auto" id="exampleInputAmount1" aria-describedby="emailHelp"
+                            placeholder="Enter amount" name="amount">
+                    </div>
+                    <button class="btn btn-primary btn-lg">Donate Now</button>
+                </form>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+         var btn = document.getElementById("btn");
+         var container1 = document.getElementById("container-1");
+         var container2 = document.getElementById("container-2");
+         btn.addEventListener("click",()=>{
+             container1.style.display = "none";
+             container2.style.display = "block";
+         });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
